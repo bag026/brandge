@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title> Hyperlinks Knowledge</title>
+    <link rel="icon" type="image/x-icon" href="ico.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styless_ind.css">
+</head>
+   
+<body>
+    <header>
+        <h1> Hyperlinks Knowledge </h1>
+        <nav>
+            <ul>
+              <li><a aria-current="page" href="index.html"><strong>Conception</strong></a></li>
+              <li><a href="History.html"><strong>History</strong></a></li>
+              <li><a href="Biography.html"><strong>Biography</strong></a></li>
+            </ul>
+          </nav>
+        <p class="author-name"><strong>Author:</strong> Brandon Ge</p> 
+        <p class="publish-date"><strong>Published on:</strong> April 6, 2024, at 10:00 AM</p> 
+        <button id="play-button" aria-label="Play background music"><i class="fa fa-play"></i></button>
+        <!--BGM seting-->
+        <!-- Background music provided under license from Free Music Archive. -->
+        <audio id="bgm" loop>
+            <source src="16.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <figure>
+            <img src="88.jpg" alt="Descriptive Image Text" class="center-image">
+            <figcaption>A web browser's address bar Credits:JMiks.</figcaption>
+        </figure>
+    </header>
+    <!--main content-->
+    <section class="content-container">
+        <h2 id="First">What is a Hyperlink?</h2>
+        <p>Hyperlinks, commonly referred to as "links," are references or navigational elements found in electronic documents. They enable users to seamlessly navigate from one section of a document to another, or even to an entirely different document, with just a single click or tap. These links serve as the foundation of the World Wide Web and are essential for its interconnected nature.</p>
+        <p>From a technical standpoint, hyperlinks are created using HTML (HyperText Markup Language), the standard language for creating web pages. In HTML, a hyperlink is coded using an anchor tag ('&lt;a&gt;'). This tag includes the href attribute (hypertext reference) which specifies the destination of the link. The destination could be a URL (Uniform Resource Locator) leading to another webpage, a file, an email address, or a location within the same page.</p>
+        <h2>How Browsers Handle Hyperlinks</h2>
+        <p>When a user clicks on a hyperlink, the browser will analyze the href attribute of the anchor tag and send an HTTP GET request to the designated URL. The server will then provide the requested page or resource, which will be displayed by the browser for the user. This process is essential for navigating through websites and accessing various web pages, documents, images, videos, and other online content. It allows users to seamlessly move from one webpage to another and access information from different sources across the internet. Additionally, this technology has greatly contributed to the interconnected nature of modern society by enabling easy access to a vast array of digital resources.</p>
+
+        <figure>
+            <img src="99.jpg" alt="Browser Hyperlink Process"  class="center-image">
+            <figcaption>Navigating Through Connectivity and Innovation. Credits:Arthon .</figcaption>
+        </figure>
+        <p>Here above is more intuitive and straightforward illustration showing how a web browser processes a hyperlink click. This figure is represents the sequence of events, from a user clicking on a hyperlink in a browser, the browser sending a request to a server, the server processing the request, and then sending a response back to the browser, culminating in the browser displaying a new webpage. </p>
+
+       <h2> Examples of Hyperlinks:</h2>
+        <p><strong>(1) External Link:</strong><br> Web developers implement hyperlinks using the anchor tag (&lt;a&gt;). The 'href' (hypertext reference) attribute within the anchor tag specifies the URL or path to the resource or section the link points to.</p>
+        <pre><code class="code-highlight">&lt;a href="https://wikipedia.com" target="_blank"&gt;Visit Example to Google&lt;/a&gt;</code></pre>
+        <p>When a user clicks this link, <a href="https://Google.com" target="_blank"> Hyperlink to Google </a>  the browser makes an HTTP request to the specified URL, loading the new page.</p>
+
+        <p> <strong>(2) Internal Link:</strong><br>To demonstrates how to create an internal link on a webpage, which allows users to jump directly to different sections within the same page. This is especially useful for improving navigation on pages.</p>
+        <pre><code class="code-highlight">&lt;a href="#section1" > Go to Section 1/a&gt;</code></pre>
+        <p><a href="#First">Go to First Paragraph</a> When a visitor to webpage and clicks "Go to First Paragraph," the browser will scroll to the part of the page where the 'h2' with the first Paragraph is located.</p>
+
+        <p> <strong>(3) Email Link:</strong><br>This will opens the default email program with a new message addressed to the specified author email</p>
+        <pre><code class="code-highlight">&lt;a href="mailto:tersorbeauge@gmail.com">Email Author/a&gt;</code></pre>
+        <p><a href="mailto:tersorbeauge@gmail.com">Email Author</a> By using 'mailto:' links, it provide a convenient way for users to initiate email communications directly from a web page, enhancing the overall user experience and facilitating easier contact through email.</p>
+        
+        <p> <strong>(4) Telephone Link:</strong><br>When clicked on a device capable of making calls, this initiates a phone call.</p>
+        <pre><code class="code-highlight">&lt;a href="tel:+0423115155">Call Us /a&gt;</code></pre>
+        <p><a href="tel:+0423115155">Call Us</a> To implement 'tel:' links, web developers provide a user-friendly method for site visitors to initiate phone calls, making it particularly advantageous for websites that aim to drive customer engagement through direct communication.</p>
+
+        <p> <strong>(5) Download Link:</strong><br>To instructs the browser to download the linked resource rather than navigating to it.</p>
+        <pre><code class="code-highlight">&lt;a href="path/to/document.pdf" download>Download PDF /a&gt;</code></pre>
+        <p><a href="research-paper.pdf" download="CustomFileName.pdf">Download PDF </a>  To offer a straightforward way for users to acquire digital resources from their website, enhancing the user experience by simplifying the process of downloading files.</p>
+
+        <p> <strong>(6) Interactive FAQ Sections:</strong><br>To implement 'toggleAnswer' function is triggered. This function checks the current state of the answer's display property. If the answer is hidden, it becomes visible, and vice versa.</p>
+        <pre><code class="code-highlight">&lt;a href="#!" onclick="toggleAnswer('answer1');"  /a&gt;</code></pre>
+        <p><a href="#!" onclick="toggleAnswer('answer1');">What attributes are commonly used in a hyperlink tag and what are their purposes?</a>
+                <span id="answer1" class="answer">
+                    The <code>&lt;a&gt;</code> tag can include several attributes, but the most common ones are <code>href</code> (specifies the link's destination), <code>target</code> (defines where to open the linked document), <code>rel</code> (specifies the relationship between the current document and the linked one), and <code>title</code> (provides additional information about the link).
+                </span>
+            </p>
+        <p>To enhances user engagement by allowing users to access additional information with question on demand.It's a user-centric approach to content presentation, providing details only when the user seeks them. </p>
+
+        <p> <strong>(7) Dynamically Changing Hyperlink:</strong><br>To create a simple interactive example where clicking a button changes the destination of a hyperlink.</p>
+        <pre><code class="code-highlight">
+        &lt;a id="dynamicLink" href="https://www.wikipedia.org/">Visit Wikipedia /a&gt;
+        &lt;button onclick="changeLink()">Change Destination /button&gt;
+        </code></pre>
+
+        <p>
+            <a id="dynamicLink" href="https://www.wikipedia.org">Visit Wikipedia</a>
+            <button onclick="changeLink()">Change Destination</button>  To demonstrates how to alter webpage elements, enhancing user interactivity and showing flexible and responsive in web design.
+        </p>
+
+        <p> <strong>(8) Changes The Theme:</strong><br> By using "toggle switch" hyperlink that changes the theme of a section of the website. It can be used to switch from a light to a dark theme.</p>
+        <pre><code class="code-highlight">
+            &lt;a href="#!" id="themeToggle" class="theme-toggle">Switch to Dark Theme /a&gt;
+        </code></pre>
+            <!-- Toggle Switch Hyperlink -->
+            <a href="#!" id="themeToggle" class="theme-toggle">Switch to Dark Theme</a>
+            <!-- Section with dynamic theme -->
+            <div id="themeSection" class="theme-section light-theme">
+                <p>Here is example content that will change theme when the toggle is clicked.</p>
+            </div>
+        <p>To demonstrates how a hyperlink can be used to interactively change the appearance of a webpage section, enhancing the user's experience by providing them with control over the display of content.</p>
+
+        <p> <strong>(9) Expandbale The Content:</strong><br> A content box that expands and collapses when user click a link, it is a common pattern for dropdown content.</p>
+        <pre><code class="code-highlight">
+            &lt;a href="#" id="toggleContent">Show More /a&gt;
+            $('#expandableContent').slideToggle(500, function()
+            { $('#toggleContent').text($(this).is(':visible') ? 'Show Less' : 'Show More');});
+        </code></pre>
+            <a href="#" id="toggleContent">Show More</a>
+            <div id="expandableContent" style="display: none; padding: 20px; border: 1px; margin-top: 10px;">
+                <p>This is some expandable content. Click "Show More" to expand and "Show Less" to collapse.</p>
+            </div>
+        
+        <p>To create interactive content sections that users can expand or collapse with a smooth animation effect through Jquery, enhancing the user experience on the webpage.</p>
+         
+        <strong>(10) Quote</strong><br>
+          
+            <div id="quoteContainer">
+                <p id="quoteText">Loading...</p>
+                <p id="quoteAuthor"></p>
+            </div>
+            <button id="newQuoteButton">Get New Quote</button>
+           
+        <p class="quote-description"> The above quote is Created through AJAX request initiated by JavaScript that fetches new data from the API 
+            and updates the content without needing to reload the entire page. To enhances user experience by providing dynamic interaction.
+        </p>
+   
+        <h2>Game Section</h2>
+            <div class="game-container">
+                <h3>Try To Catch the Ball</h3>
+                <div id="gameArea">
+                    <div id="ball"></div>
+                    <p>Score: <span id="score">0</span></p>
+                </div>
+            </div>
+            <p class="quote-description">In this game, a "ball" will move across the screen, and the user needs to click on it to "catch" it. When the ball is clicked, it'll move to a new random position. Through the simple "catch the ball" game, this section shows basic animation and interaction between the user. While this game is quite basic, similar principles can be applied to create more complex and interactive animations and games in the future.</p>
+    </section>
+    <footer class="site-footer">
+        © 2024 Coded with interest by Brandon Ge
+    </footer>
+    <!-- Custom style sheets and scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   
+    <script src="scripts_ind.js"></script> 
+</body>
+</html>
